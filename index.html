@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Test Task</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/main.css">
+
+	<!-- FontAwesome через CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+	<!-- ================= Шапка ================= -->
+	<div class="header-top">
+		<div class="ticker-container">
+			<div class="ticker">
+				<span>✨ Креативная витрина · Интерактивные проекты · Современные решения · UX/UI дизайн ·</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="header-middle">
+		<span><i class="fas fa-envelope"></i> info@creativedesign.ru</span>
+		<span><i class="fas fa-phone"></i> +7 900 000 00 00</span>
+	</div>
+
+	<div class="header-bottom">
+		<div class="logo">Logo</div>
+		<nav class="nav">
+			<a href="#"><i class="fas fa-home"></i> Главная</a>
+			<a href="#showcase"><i class="fas fa-th-large"></i> Витрина</a>
+			<div class="dropdown">
+				<a href="#" class="dropdown-toggle"><i class="fas fa-cogs"></i> Услуги ▾</a>
+				<div class="dropdown-menu">
+					<a href="#"><i class="fas fa-paint-brush"></i> Веб-дизайн</a>
+					<a href="#"><i class="fas fa-code"></i> Разработка</a>
+					<a href="#"><i class="fas fa-chart-line"></i> Консультации</a>
+				</div>
+			</div>
+			<a href="#" class="nav-secondary"><i class="fas fa-info-circle"></i> О компании</a>
+			<button class="contact-btn"><i class="fas fa-paper-plane"></i> Связаться</button>
+		</nav>
+		<button class="burger">
+			<i class="fas fa-bars"></i>
+		</button>
+	</div>
+
+	<!-- Мобильное меню -->
+	<div class="mobile-menu" id="mobileMenu">
+		<button class="mobile-close"><i class="fas fa-times"></i></button>
+		<nav class="mobile-nav">
+			<a href="#"><i class="fas fa-home"></i> Главная</a>
+			<a href="#showcase"><i class="fas fa-th-large"></i> Витрина</a>
+			<a href="#"><i class="fas fa-cogs"></i> Услуги</a>
+			<a href="#"><i class="fas fa-info-circle"></i> О компании</a>
+			<button class="contact-btn mobile-contact"><i class="fas fa-paper-plane"></i> Связаться</button>
+		</nav>
+	</div>
+
+	<!-- ================= Контент ================= -->
+	<main class="content">
+		<!-- ===== КРЕАТИВНАЯ ВИТРИНА ===== -->
+		<section class="showcase" id="showcase">
+			<h2><i class="fas fa-sparkles"></i> Интерактивная витрина</h2>
+			<p class="showcase-subtitle">Исследуйте проекты уникальным способом</p>
+
+			<div class="creative-controls">
+				<!-- Палитра фильтров -->
+				<div class="filter-palette">
+					<button data-filter="all" class="palette-btn active" style="--color: #8b5cf6">
+						<span class="palette-dot"></span>
+						<span>Все проекты</span>
+					</button>
+					<button data-filter="ui" class="palette-btn" style="--color: #10b981">
+						<span class="palette-dot"></span>
+						<span>UI Дизайн</span>
+					</button>
+					<button data-filter="frontend" class="palette-btn" style="--color: #3b82f6">
+						<span class="palette-dot"></span>
+						<span>Frontend</span>
+					</button>
+					<button data-filter="motion" class="palette-btn" style="--color: #f59e0b">
+						<span class="palette-dot"></span>
+						<span>Motion</span>
+					</button>
+				</div>
+
+				<!-- Простой поиск -->
+				<div class="simple-search">
+					<i class="fas fa-search"></i>
+					<input type="text" id="projectSearch" placeholder="Поиск проектов...">
+				</div>
+			</div>
+
+			<!-- Витрина проектов -->
+			<div class="creative-showcase">
+				<div class="showcase-container" id="showcaseContainer">
+					<!-- Карточки будут сгенерированы через JS -->
+				</div>
+			</div>
+
+			<!-- Только кнопка перемешивания -->
+			<div class="showcase-actions">
+				<button class="action-btn" id="shuffleBtn">
+					<i class="fas fa-random"></i> Перемешать карточки
+				</button>
+			</div>
+		</section>
+
+		<!-- Пустой блок для скролла -->
+		<div style="height: 800px; background: linear-gradient(180deg, #faf5ff 0%, #f0f9ff 100%);"></div>
+	</main>
+
+	<footer class="footer" id="footer">
+		<div class="footer-content">
+			<div class="footer-logo">Logo</div>
+			<p>Триггер для модального окна</p>
+			<div class="footer-info">
+				<span>Достигли конца страницы</span>
+			</div>
+		</div>
+	</footer>
+
+	<!-- ================= Модальное окно ================= -->
+	<div class="modal" id="modal">
+		<div class="modal-overlay"></div>
+		<div class="modal-content">
+			<button class="modal-close" aria-label="Закрыть">
+				<i class="fas fa-times"></i>
+			</button>
+			<div class="modal-body"></div>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
