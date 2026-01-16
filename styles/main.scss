@@ -100,10 +100,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 900;
     border-bottom: 1px solid $gray;
     color: $primary-dark;
+    height: 32px;
+    box-sizing: border-box;
 
     span {
         display: flex;
@@ -113,6 +115,8 @@ body {
 
     &.hidden {
         transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -129,6 +133,7 @@ body {
     align-items: center;
     z-index: 800;
     box-shadow: $shadow;
+    transition: top 0.3s ease;
 
     &.scrolled {
         top: 32px;
@@ -1078,4 +1083,3 @@ body {
         padding: 40px 16px;
     }
 }
-

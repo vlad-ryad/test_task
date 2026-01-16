@@ -1,18 +1,28 @@
 /* ================= HEADER SCROLL ================= */
 let lastScroll = 0;
-
 const headerMiddle = document.querySelector('.header-middle');
+const headerBottom = document.querySelector('.header-bottom');
 
 window.addEventListener('scroll', () => {
 	const current = window.scrollY;
 
 	if (current > lastScroll && current > 50) {
 		headerMiddle.classList.add('hidden');
+		headerBottom.classList.add('scrolled');
 	} else {
 		headerMiddle.classList.remove('hidden');
+		headerBottom.classList.remove('scrolled');
 	}
 
 	lastScroll = current;
+});
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', () => {
+	if (window.scrollY > 50) {
+		headerMiddle.classList.add('hidden');
+		headerBottom.classList.add('scrolled');
+	}
 });
 
 /* ================= БУРГЕР МЕНЮ ================= */
